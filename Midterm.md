@@ -114,7 +114,7 @@ $$
 
 ## 7. Analysis (Presentation Style)
 
-From the obtained solution, we can observe how the velocity evolves over time.  
+From the answer obtained from step seven, we can observe how the velocity evolves over time.  
 At the beginning, when \( t = 0 \), the exponential term is equal to 1, so the velocity starts from zero. As time increases, the exponential term e raised to the power of (-c/m · t) decreases over time.  
 
 This causes the velocity \( v(t) \) to increase, but not indefinitely. Instead, it approaches a constant value, which is \( \frac{mg}{c} \). This value is known as the terminal velocity.  
