@@ -29,7 +29,7 @@ $$
 
 ---
 
-## 3. Bringing the formula into a solvable form (Rewriting the Equation)
+## 3. Bringing the formula into a solvable form
 
 To make the equation easier to solve, we rearrange it into a standard mathematical form:
 
@@ -41,7 +41,7 @@ At this stage, we recognize that this is a first-order linear differential equat
 
 ---
 
-## 4. Solving strategy (Using an Analytical Method)
+## 4. Solving strategy
 
 To solve the equation systematically, we apply the integrating factor method.
 
@@ -97,7 +97,7 @@ $$
 
 ---
 
-## 5. Applying Initial Condition (What happens at the start?)
+## 5. Applying initial condition
 
 We assume the object starts from rest:
 
