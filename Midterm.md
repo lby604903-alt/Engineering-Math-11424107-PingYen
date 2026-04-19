@@ -129,6 +129,152 @@ $$
 
 ---
 
+# Problem 2: Mechanical Engineering Case — Parachute Terminal Velocity
+
+---
+
+## 1. Problem Understanding (What is happening?)
+
+An object is falling in air.  
+We want to find how its velocity changes with time under gravity and air resistance.
+
+---
+
+## 2. Problem Solving Basis (Model Construction)
+
+Start from Newton’s Second Law:
+
+$$
+F = ma
+$$
+
+Forces:
+
+- Gravity: \( mg \)
+- Drag force: \( cv \)
+
+Equation of motion:
+
+$$
+m \frac{dv}{dt} = mg - cv
+$$
+
+---
+
+## 3. Standard Form (Rearranging the Equation)
+
+Divide by \( m \):
+
+$$
+\frac{dv}{dt} = g - \frac{c}{m}v
+$$
+
+Rearrange:
+
+$$
+\frac{dv}{dt} + \frac{c}{m}v = g
+$$
+
+---
+
+## 4. Solution Method (Integrating Factor)
+
+### Step 1: Integrating factor
+
+$$
+\mu(t) = e^{\int \frac{c}{m} dt} = e^{\frac{c}{m}t}
+$$
+
+---
+
+### Step 2: Multiply equation
+
+$$
+e^{\frac{c}{m}t}\frac{dv}{dt} + \frac{c}{m}e^{\frac{c}{m}t}v = ge^{\frac{c}{m}t}
+$$
+
+Left side becomes:
+
+$$
+\frac{d}{dt}\left(e^{\frac{c}{m}t}v\right)
+$$
+
+So:
+
+$$
+\frac{d}{dt}\left(e^{\frac{c}{m}t}v\right) = ge^{\frac{c}{m}t}
+$$
+
+---
+
+### Step 3: Integrate
+
+$$
+\int \frac{d}{dt}\left(e^{\frac{c}{m}t}v\right)dt = \int ge^{\frac{c}{m}t}dt
+$$
+
+Left side:
+
+$$
+e^{\frac{c}{m}t}v
+$$
+
+Right side:
+
+$$
+g \cdot \frac{m}{c} e^{\frac{c}{m}t}
+$$
+
+So:
+
+$$
+e^{\frac{c}{m}t}v = \frac{mg}{c}e^{\frac{c}{m}t} + C
+$$
+
+---
+
+### Step 4: Solve for \( v(t) \)
+
+Divide by \( e^{\frac{c}{m}t} \):
+
+$$
+v(t) = \frac{mg}{c} + Ce^{-\frac{c}{m}t}
+$$
+
+---
+
+## 5. Initial Condition
+
+At \( t = 0 \), assume:
+
+$$
+v(0) = 0
+$$
+
+Substitute:
+
+$$
+0 = \frac{mg}{c} + C
+$$
+
+So:
+
+$$
+C = -\frac{mg}{c}
+$$
+
+---
+
+## 6. Final Solution
+
+Substitute \( C \):
+
+$$
+v(t) = \frac{mg}{c}\left(1 - e^{-\frac{c}{m}t}\right)
+$$
+
+---
+
 ## 7. Analysis (Presentation Style)
 
 From the answer obtained from step seven, we can observe how the velocity evolves over time.  
