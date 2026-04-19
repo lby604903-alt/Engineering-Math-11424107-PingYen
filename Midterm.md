@@ -1,7 +1,7 @@
 # My Midterm Report : Calculating the terminal velocity of a parachute.
 
 
-## 1. Problem Understanding (What are we trying to describe?)
+## 1. Problem understanding
 
 We are analyzing an object falling through air.  
 The goal is to understand how its velocity changes over time under the influence of gravity and air resistance.
@@ -41,7 +41,7 @@ At this stage, we recognize that this is a first-order linear differential equat
 
 ---
 
-## 4. Solving Strategy (Using an Analytical Method)
+## 4. Solving strategy (Using an Analytical Method)
 
 To solve the equation systematically, we apply the integrating factor method.
 
