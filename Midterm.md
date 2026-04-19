@@ -12,8 +12,7 @@ Date: 2026/04/19
 
 ## 1. Problem understanding
 
-We are analyzing an object falling through air.  
-The goal is to understand how its velocity changes over time under the influence of gravity and air resistance.
+We are currently examining the motion of an object as it falls through the air, focusing on how its behavior evolves over time. In particular, we aim to understand how its velocity changes step by step under the combined influence of gravity, which continuously pulls it downward, and air resistance, which gradually opposes its motion and becomes more significant as the speed increases.
 
 ---
 
