@@ -1,24 +1,24 @@
-# 題目二：機械工程案例 — 降落傘終端速度
+# Problem 2: Mechanical Engineering Case — Parachute Terminal Velocity
 
-## 一、問題描述
-考慮一物體在空氣中下落，受到重力與空氣阻力作用，求其速度 $v(t)$ 隨時間的變化情形。
+## 1. Problem Description
+Consider an object falling through air under the influence of gravity and air resistance. Determine how its velocity \( v(t) \) changes with time.
 
 ---
 
-## 二、建立數學模型
+## 2. Mathematical Modeling
 
-根據牛頓第二定律：
+According to Newton's Second Law:
 
 $$
 F = ma
 $$
 
-受力分析如下：
+Forces acting on the object:
 
-- 重力：$mg$（向下）
-- 阻力：$cv$（方向與速度相反）
+- Gravity: \( mg \) (downward)  
+- Air resistance: \( cv \) (opposite to velocity)
 
-因此可得運動方程：
+Thus, the equation of motion is:
 
 $$
 m \frac{dv}{dt} = mg - cv
@@ -26,21 +26,21 @@ $$
 
 ---
 
-## 三、化為標準微分方程
+## 3. Standard Form of the Differential Equation
 
-將方程式整理為標準形式：
+Rewriting the equation:
 
 $$
 \frac{dv}{dt} + \frac{c}{m}v = g
 $$
 
-此為一階線性微分方程。
+This is a first-order linear ordinary differential equation.
 
 ---
 
-## 四、使用積分因子法求解
+## 4. Solution Using Integrating Factor Method
 
-### (1) 求積分因子
+### (1) Integrating Factor
 
 $$
 \mu(t) = e^{\int \frac{c}{m} dt} = e^{\frac{c}{m}t}
@@ -48,13 +48,13 @@ $$
 
 ---
 
-### (2) 方程兩邊乘上積分因子
+### (2) Multiply Both Sides
 
 $$
 e^{\frac{c}{m}t} \frac{dv}{dt} + \frac{c}{m} e^{\frac{c}{m}t} v = g e^{\frac{c}{m}t}
 $$
 
-左邊可寫成導數形式：
+Left-hand side becomes:
 
 $$
 \frac{d}{dt} \left( e^{\frac{c}{m}t} v \right) = g e^{\frac{c}{m}t}
@@ -62,13 +62,13 @@ $$
 
 ---
 
-### (3) 兩邊積分
+### (3) Integrate Both Sides
 
 $$
 \int \frac{d}{dt} \left( e^{\frac{c}{m}t} v \right) dt = \int g e^{\frac{c}{m}t} dt
 $$
 
-得到：
+Result:
 
 $$
 e^{\frac{c}{m}t} v = \frac{mg}{c} e^{\frac{c}{m}t} + C
@@ -76,7 +76,7 @@ $$
 
 ---
 
-### (4) 解出 $v(t)$
+### (4) Solve for \( v(t) \)
 
 $$
 v(t) = \frac{mg}{c} + C e^{-\frac{c}{m}t}
@@ -84,15 +84,15 @@ $$
 
 ---
 
-## 五、套用初始條件
+## 5. Apply Initial Condition
 
-假設初始速度為：
+Assume initial velocity:
 
 $$
 v(0) = 0
 $$
 
-代入得：
+Substitute:
 
 $$
 0 = \frac{mg}{c} + C
@@ -104,9 +104,7 @@ $$
 
 ---
 
-## 六、最終解
-
-因此速度函數為：
+## 6. Final Solution
 
 $$
 v(t) = \frac{mg}{c} \left(1 - e^{-\frac{c}{m}t}\right)
@@ -114,28 +112,26 @@ $$
 
 ---
 
-## 七、結果分析
+## 7. Analysis
 
-### (1) 終端速度
+### (1) Terminal Velocity
 
-當 $t \to \infty$ 時：
+As \( t \to \infty \):
 
 $$
 v(t) \to \frac{mg}{c}
 $$
 
-此稱為終端速度（Terminal Velocity）。
+---
+
+### (2) Physical Interpretation
+
+- Initial stage: velocity increases rapidly  
+- Intermediate stage: air resistance grows  
+- Long-term: velocity approaches a constant value (terminal velocity)
 
 ---
 
-### (2) 物理意義
+## 8. Conclusion
 
-- 初期：速度逐漸增加
-- 中期：阻力逐漸變大
-- 長時間後：達到穩定速度（終端速度）
-
----
-
-## 八、結論
-
-本題利用牛頓第二定律建立一階線性微分方程，並透過積分因子法求解，得到速度隨時間呈指數形式趨近於終端速度的解析解。
+Using Newton’s Second Law, a first-order linear differential equation is established and solved via the integrating factor method. The solution shows that velocity increases exponentially and approaches a constant terminal velocity over time.
