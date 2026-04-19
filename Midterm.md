@@ -138,8 +138,6 @@ $$
 
 ---
 
----
-
 ## 7. Problem-solving process analysis
 
 From the answer obtained from step seven, we can observe how the velocity evolves over time.  
