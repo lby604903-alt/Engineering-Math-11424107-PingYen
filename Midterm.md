@@ -119,7 +119,7 @@ $$
 
 ---
 
-## 6. Final Result (The complete solution)
+## 6. Import algebra & Final result
 
 Substituting the constant back gives the final velocity function:
 
@@ -144,7 +144,7 @@ At that point, the object continues to move at a constant speed, which is the te
 
 ---
 
-## 8. My Conclusion 
+## 8. My conclusion 
 
 In this problem, we started by applying Newton’s Second Law to model the motion of an object falling through air. This led to a first-order linear differential equation describing the velocity as a function of time.  
 
