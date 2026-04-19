@@ -1,9 +1,12 @@
 # My Midterm Report : Calculating the terminal velocity of a parachute.
 
-Class: Department of Computer Science and Engineering, First Year Class A.
-Student ID: 11424107.
-Name: 李秉彥.
-Date: 2026/04/19.
+Class: Department of Computer Science and Engineering, First Year Class A
+
+Student ID: 11424107
+
+Name: 李秉彥 
+
+Date: 2026/04/19
 
 ---
 
