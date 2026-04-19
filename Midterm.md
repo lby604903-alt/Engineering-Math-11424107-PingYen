@@ -121,13 +121,14 @@ $$
 
 ## 6. Final Result (The complete solution)
 
----
-
 Substituting the constant back gives the final velocity function:
 
 $$
 v(t) = \frac{mg}{c} \left(1 - e^{-\frac{c}{m}t}\right)
 $$
+
+---
+
 ## 7. Analysis (Presentation Style)
 
 From the answer obtained from step seven, we can observe how the velocity evolves over time.  
