@@ -1,4 +1,4 @@
-# My midterm project: Calculating the terminal velocity of a parachute.
+# My Midterm Report : Calculating the terminal velocity of a parachute.
 
 ## 1. Problem Description
 Consider an object falling through air under the influence of gravity and air resistance. Determine how its velocity \( v(t) \) changes with time.
