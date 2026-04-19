@@ -45,8 +45,6 @@ $$
 \frac{dv}{dt} + \frac{c}{m}v = g
 $$
 
-At this stage, we recognize that this is a first-order linear differential equation, which has a known solution method.
-
 ---
 
 ## 4. Solving strategy
