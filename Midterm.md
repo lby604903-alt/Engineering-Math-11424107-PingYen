@@ -112,40 +112,25 @@ $$
 
 ---
 
-## 7. Analysis (Discussion Format)
+## 7. Analysis (Presentation Style)
 
-**Student:** What happens to the velocity as time increases?  
+From the obtained solution, we can observe how the velocity evolves over time.  
+At the beginning, when \( t = 0 \), the exponential term is equal to 1, so the velocity starts from zero. As time increases, the exponential term \( e^{-\frac{c}{m}t} \) gradually decreases toward zero.  
 
-**Instructor:** As time goes on, the exponential term \( e^{-\frac{c}{m}t} \) decreases toward zero. This means the velocity gradually approaches a constant value.  
+This causes the velocity \( v(t) \) to increase, but not indefinitely. Instead, it approaches a constant value, which is \( \frac{mg}{c} \). This value is known as the terminal velocity.  
 
-**Student:** What is that constant value?  
+Physically, this behavior can be explained by the balance of forces. Initially, gravity dominates, causing the object to accelerate downward. However, as the velocity increases, the air resistance \( cv \) also increases. Eventually, the air resistance becomes equal to the gravitational force, resulting in zero net force and, consequently, zero acceleration.  
 
-**Instructor:** It is \( \frac{mg}{c} \), which is called the terminal velocity.  
-
-**Student:** Why doesn’t the object keep accelerating?  
-
-**Instructor:** Because as velocity increases, the air resistance \( cv \) also increases. Eventually, it balances the gravitational force \( mg \), resulting in zero net force and no further acceleration.  
-
-**Student:** So the motion stabilizes over time?  
-
-**Instructor:** Exactly. The object starts by accelerating, then slows its acceleration, and finally moves at a constant speed.
+At that point, the object continues to move at a constant speed, which is the terminal velocity.
 
 ---
 
-## 8. Conclusion (Discussion Format)
+## 8. Conclusion (Presentation Style)
 
-**Student:** So what is the main takeaway from this problem?  
+In this problem, we started by applying Newton’s Second Law to model the motion of an object falling through air. This led to a first-order linear differential equation describing the velocity as a function of time.  
 
-**Instructor:** The key idea is that we used Newton’s Second Law to model the motion and obtained a first-order linear differential equation.  
+By using the integrating factor method, we derived an explicit solution for \( v(t) \). The result shows that the velocity increases exponentially at first and gradually approaches a constant value.  
 
-**Student:** And how did we solve it?  
+This constant value, known as the terminal velocity, represents the steady-state behavior of the system when gravitational force and air resistance are balanced.  
 
-**Instructor:** We applied the integrating factor method to find an explicit expression for velocity as a function of time.  
-
-**Student:** What does the solution tell us physically?  
-
-**Instructor:** It shows that the velocity increases exponentially at first and then approaches a constant terminal velocity.  
-
-**Student:** So this model explains real falling motion in air?  
-
-**Instructor:** Yes, it captures the essential behavior of objects falling with air resistance.
+Overall, this model effectively demonstrates how mathematical methods can be used to describe and predict real physical phenomena.
