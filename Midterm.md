@@ -1,5 +1,11 @@
 # My Midterm Report : Calculating the terminal velocity of a parachute.
 
+Class: CS A
+Student ID: 11424146
+Name: 鄭沂加
+Date: 2026/04/18
+
+---
 
 ## 1. Problem understanding
 
