@@ -112,26 +112,40 @@ $$
 
 ---
 
-## 7. Analysis
+## 7. Analysis (Discussion Format)
 
-### (1) Terminal Velocity
+**Student:** What happens to the velocity as time increases?  
 
-As \( t \to \infty \):
+**Instructor:** As time goes on, the exponential term \( e^{-\frac{c}{m}t} \) decreases toward zero. This means the velocity gradually approaches a constant value.  
 
-$$
-v(t) \to \frac{mg}{c}
-$$
+**Student:** What is that constant value?  
+
+**Instructor:** It is \( \frac{mg}{c} \), which is called the terminal velocity.  
+
+**Student:** Why doesn’t the object keep accelerating?  
+
+**Instructor:** Because as velocity increases, the air resistance \( cv \) also increases. Eventually, it balances the gravitational force \( mg \), resulting in zero net force and no further acceleration.  
+
+**Student:** So the motion stabilizes over time?  
+
+**Instructor:** Exactly. The object starts by accelerating, then slows its acceleration, and finally moves at a constant speed.
 
 ---
 
-### (2) Physical Interpretation
+## 8. Conclusion (Discussion Format)
 
-- Initial stage: velocity increases rapidly  
-- Intermediate stage: air resistance grows  
-- Long-term: velocity approaches a constant value (terminal velocity)
+**Student:** So what is the main takeaway from this problem?  
 
----
+**Instructor:** The key idea is that we used Newton’s Second Law to model the motion and obtained a first-order linear differential equation.  
 
-## 8. Conclusion
+**Student:** And how did we solve it?  
 
-Using Newton’s Second Law, a first-order linear differential equation is established and solved via the integrating factor method. The solution shows that velocity increases exponentially and approaches a constant terminal velocity over time.
+**Instructor:** We applied the integrating factor method to find an explicit expression for velocity as a function of time.  
+
+**Student:** What does the solution tell us physically?  
+
+**Instructor:** It shows that the velocity increases exponentially at first and then approaches a constant terminal velocity.  
+
+**Student:** So this model explains real falling motion in air?  
+
+**Instructor:** Yes, it captures the essential behavior of objects falling with air resistance.
