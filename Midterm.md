@@ -8,7 +8,7 @@ The goal is to understand how its velocity changes over time under the influence
 
 ---
 
-## 2. Problem Solving Basis (Mathematical Modeling)
+## 2. Problem solving Basis
 
 To describe the motion scientifically, we start from Newton’s Second Law:
 
@@ -29,7 +29,7 @@ $$
 
 ---
 
-## 3. Bringing the Model into a Solvable Form (Rewriting the Equation)
+## 3. Bringing the formula into a solvable form (Rewriting the Equation)
 
 To make the equation easier to solve, we rearrange it into a standard mathematical form:
 
