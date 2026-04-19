@@ -1,9 +1,9 @@
 # My Midterm Report : Calculating the terminal velocity of a parachute.
 
-Class: CS A
-Student ID: 11424146
-Name: 鄭沂加
-Date: 2026/04/18
+Class: CSE Freshman Class A
+Student ID: 11424107
+Name: 李秉彥
+Date: 2026/04/19
 
 ---
 
