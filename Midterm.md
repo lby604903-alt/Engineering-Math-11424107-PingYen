@@ -18,7 +18,7 @@ We are looking at how an object falls through the air and trying to figure out w
 
 ## 2. Problem solving Basis
 
-To describe the motion scientifically, we start from Newton’s Second Law:
+By Newton's second law:
 
 $$
 F = ma
