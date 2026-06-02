@@ -1,269 +1,328 @@
 # Solving a Second-Order Differential Equation Using Laplace Transform
 
-## Problem Statement
+## Problem
 
-Solve the following differential equation using the Laplace Transform:
+Solve the differential equation
 
-\[
-2\frac{d^2x}{dt^2}+7\frac{dx}{dt}+3x=0
-\]
+```math
+2\frac{d^2x}{dt^2}
++
+7\frac{dx}{dt}
++
+3x
+=
+0
+```
 
 with the initial conditions
 
-\[
-x(0)=0,\qquad x'(0)=1
-\]
+```math
+x(0)=0
+```
+
+```math
+x'(0)=1
+```
 
 ---
 
-## Step 1: Apply the Laplace Transform
+# Step 1: Apply the Laplace Transform
 
 Let
 
-\[
+```math
 X(s)=\mathcal{L}\{x(t)\}
-\]
+```
 
-Using the Laplace transform formulas:
+Using the Laplace transform formulas
 
-\[
-\mathcal{L}\{x'(t)\}=sX(s)-x(0)
-\]
+```math
+\mathcal{L}\{x'(t)\}
+=
+sX(s)-x(0)
+```
 
-\[
-\mathcal{L}\{x''(t)\}=s^2X(s)-sx(0)-x'(0)
-\]
+```math
+\mathcal{L}\{x''(t)\}
+=
+s^2X(s)-sx(0)-x'(0)
+```
 
-Substituting the initial conditions:
+Substitute the initial conditions
 
-\[
-x(0)=0,\qquad x'(0)=1
-\]
+```math
+x(0)=0
+```
 
-gives
+```math
+x'(0)=1
+```
 
-\[
-\mathcal{L}\{x''(t)\}=s^2X(s)-1
-\]
+Then
 
-and
+```math
+\mathcal{L}\{x''(t)\}
+=
+s^2X(s)-1
+```
 
-\[
-\mathcal{L}\{x'(t)\}=sX(s)
-\]
+```math
+\mathcal{L}\{x'(t)\}
+=
+sX(s)
+```
 
-Substitute these into the differential equation:
+Substituting into the differential equation gives
 
-\[
-2(s^2X(s)-1)+7sX(s)+3X(s)=0
-\]
+```math
+2(s^2X(s)-1)
++
+7sX(s)
++
+3X(s)
+=
+0
+```
 
 ---
 
-## Step 2: Solve for \(X(s)\)
+# Step 2: Solve for $X(s)$
 
-Expand and simplify:
+Expand:
 
-\[
-2s^2X(s)-2+7sX(s)+3X(s)=0
-\]
+```math
+2s^2X(s)
+-
+2
++
+7sX(s)
++
+3X(s)
+=
+0
+```
 
-Factor out \(X(s)\):
+Factor out $X(s)$:
 
-\[
-X(s)(2s^2+7s+3)=2
-\]
+```math
+X(s)
+\left(
+2s^2+7s+3
+\right)
+=
+2
+```
 
-Thus,
+Therefore
 
-\[
-X(s)=\frac{2}{2s^2+7s+3}
-\]
+```math
+X(s)
+=
+\frac{2}
+{2s^2+7s+3}
+```
 
 Factor the denominator:
 
-\[
-2s^2+7s+3=(2s+1)(s+3)
-\]
+```math
+2s^2+7s+3
+=
+(2s+1)(s+3)
+```
 
-Therefore,
+Hence
 
-\[
-X(s)=\frac{2}{(2s+1)(s+3)}
-\]
+```math
+X(s)
+=
+\frac{2}
+{(2s+1)(s+3)}
+```
 
 ---
 
-## Step 3: Partial Fraction Decomposition
+# Step 3: Partial Fraction Decomposition
 
 Assume
 
-\[
-\frac{2}{(2s+1)(s+3)}
+```math
+\frac{2}
+{(2s+1)(s+3)}
 =
 \frac{A}{2s+1}
 +
 \frac{B}{s+3}
-\]
+```
 
-Multiplying both sides by \((2s+1)(s+3)\):
+Multiply both sides by $(2s+1)(s+3)$:
 
-\[
-2=A(s+3)+B(2s+1)
-\]
+```math
+2
+=
+A(s+3)
++
+B(2s+1)
+```
 
 Expand:
 
-\[
-2=(A+2B)s+(3A+B)
-\]
+```math
+2
+=
+(A+2B)s
++
+(3A+B)
+```
 
-Comparing coefficients:
+Compare coefficients:
 
-\[
+```math
 A+2B=0
-\]
+```
 
-\[
+```math
 3A+B=2
-\]
+```
 
-From the first equation:
+From
 
-\[
+```math
 A=-2B
-\]
+```
 
 Substitute into the second equation:
 
-\[
+```math
 3(-2B)+B=2
-\]
+```
 
-\[
+```math
 -5B=2
-\]
+```
 
-\[
+```math
 B=-\frac{2}{5}
-\]
+```
 
-\[
+Thus
+
+```math
 A=\frac{4}{5}
-\]
+```
 
-Thus,
+Therefore
 
-\[
-X(s)=
-\frac{\frac{4}{5}}{2s+1}
--
-\frac{\frac{2}{5}}{s+3}
-\]
-
-Rewrite the first term:
-
-\[
-\frac{\frac{4}{5}}{2s+1}
-=
-\frac{2}{5}\cdot\frac{1}{s+\frac{1}{2}}
-\]
-
-Therefore,
-
-\[
+```math
 X(s)
 =
-\frac{2}{5}\frac{1}{s+\frac{1}{2}}
+\frac{\frac45}{2s+1}
 -
-\frac{2}{5}\frac{1}{s+3}
-\]
+\frac{\frac25}{s+3}
+```
+
+Rewrite as
+
+```math
+X(s)
+=
+\frac25
+\frac1{s+\frac12}
+-
+\frac25
+\frac1{s+3}
+```
 
 ---
 
-## Step 4: Apply the Inverse Laplace Transform
+# Step 4: Apply the Inverse Laplace Transform
 
 Using
 
-\[
+```math
 \mathcal{L}^{-1}
 \left\{
-\frac{1}{s+a}
+\frac1{s+a}
 \right\}
 =
 e^{-at}
-\]
+```
 
 we obtain
 
-\[
+```math
 x(t)
 =
-\frac{2}{5}e^{-t/2}
+\frac25e^{-t/2}
 -
-\frac{2}{5}e^{-3t}
-\]
+\frac25e^{-3t}
+```
 
-Factor out \(\frac{2}{5}\):
+Factor out $\frac25$:
 
-\[
-\boxed{
-x(t)=\frac{2}{5}
+```math
+x(t)
+=
+\frac25
 \left(
-e^{-t/2}-e^{-3t}
+e^{-t/2}
+-
+e^{-3t}
 \right)
-}
-\]
+```
 
 ---
 
-## Verification
+# Step 5: Verification
 
-### Check \(x(0)\)
+Check $x(0)$:
 
-\[
+```math
 x(0)
 =
-\frac{2}{5}(1-1)
+\frac25(1-1)
 =
 0
-\]
+```
 
-### Check \(x'(0)\)
+Check $x'(0)$:
 
-Differentiate:
+Differentiate
 
-\[
+```math
 x'(t)
 =
--\frac{1}{5}e^{-t/2}
+-\frac15e^{-t/2}
 +
-\frac{6}{5}e^{-3t}
-\]
+\frac65e^{-3t}
+```
 
-Substitute \(t=0\):
+Substitute $t=0$:
 
-\[
+```math
 x'(0)
 =
--\frac{1}{5}
+-\frac15
 +
-\frac{6}{5}
+\frac65
 =
 1
-\]
+```
 
 Both initial conditions are satisfied.
 
 ---
 
-## Final Answer
+# Final Answer
 
-\[
+```math
 \boxed{
-x(t)=\frac{2}{5}
+x(t)
+=
+\frac25
 \left(
-e^{-t/2}-e^{-3t}
+e^{-t/2}
+-
+e^{-3t}
 \right)
 }
-\]
+```
