@@ -1,2 +1,15 @@
 #Solving the equations using Laplace's method
 ## Problem Statement
+Solve the following differential equation using the Laplace Transform:
+
+\[
+2\frac{d^2x}{dt^2}+7\frac{dx}{dt}+3x=0
+\]
+
+with the initial conditions
+
+\[
+x(0)=0,\qquad x'(0)=1
+\]
+
+---
