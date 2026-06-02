@@ -26,7 +26,7 @@ x'(0)=1
 
 ---
 
-# Step 1: Apply the Laplace Transform
+# Step 1: Transform the Equation into the s-Domain
 
 Let
 
@@ -86,7 +86,7 @@ Substituting into the differential equation gives
 
 ---
 
-# Step 2: Solve for $X(s)$
+# Step 2: Determine the Expression for X(s)
 
 Expand:
 
@@ -141,7 +141,7 @@ X(s)
 
 ---
 
-# Step 3: Partial Fraction Decomposition
+# Step 3: Simplify Using Partial Fractions
 
 Assume
 
@@ -234,7 +234,7 @@ X(s)
 
 ---
 
-# Step 4: Apply the Inverse Laplace Transform
+# Step 4: Recover the Solution in the Time Domain
 
 Using
 
@@ -272,7 +272,7 @@ e^{-3t}
 
 ---
 
-# Step 5: Verification
+# Step 5: Confirm the Initial Conditions
 
 Check $x(0)$:
 
@@ -312,7 +312,7 @@ Both initial conditions are satisfied.
 
 ---
 
-# Final Answer
+# Final Result
 
 ```math
 \boxed{
