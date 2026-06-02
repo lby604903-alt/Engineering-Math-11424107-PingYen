@@ -1,233 +1,328 @@
-# Solving a Second-Order Differential Equation Using Laplace Transform
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laplace Transform Solution</title>
 
-## Problem Statement
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
-Solve the differential equation:
+    <style>
+        body {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+        }
 
-```text
-2x'' + 7x' + 3x = 0
-```
+        h1, h2 {
+            text-align: center;
+        }
 
-with initial conditions:
+        .equation {
+            text-align: center;
+            margin: 15px 0;
+        }
 
-```text
-x(0) = 0
-x'(0) = 1
-```
+        .box {
+            background-color: #f5f5f5;
+            border-left: 5px solid #444;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
 
----
+<h1>Solving a Second-Order Differential Equation Using Laplace Transform</h1>
 
-## Step 1: Apply the Laplace Transform
+<h2>Problem Statement</h2>
 
-Let
+<div class="equation">
+$$
+2\frac{d^2x}{dt^2}+7\frac{dx}{dt}+3x=0
+$$
+</div>
 
-```text
-X(s) = L{x(t)}
-```
+<p>with the initial conditions</p>
 
-Using the Laplace transform properties:
+<div class="equation">
+$$
+x(0)=0,\qquad x'(0)=1
+$$
+</div>
 
-```text
-L{x'(t)}  = sX(s) - x(0)
-L{x''(t)} = s²X(s) - sx(0) - x'(0)
-```
+<hr>
 
-Substituting the initial conditions:
+<h2>Step 1: Apply the Laplace Transform</h2>
 
-```text
-x(0) = 0
-x'(0) = 1
-```
+<p>Let</p>
 
-gives
+<div class="equation">
+$$
+X(s)=\mathcal{L}\{x(t)\}
+$$
+</div>
 
-```text
-L{x''(t)} = s²X(s) - 1
-L{x'(t)}  = sX(s)
-```
+<p>Using the Laplace transform formulas:</p>
 
-Substitute into the differential equation:
+<div class="equation">
+$$
+\mathcal{L}\{x'(t)\}=sX(s)-x(0)
+$$
+</div>
 
-```text
-2(s²X(s) - 1) + 7sX(s) + 3X(s) = 0
-```
+<div class="equation">
+$$
+\mathcal{L}\{x''(t)\}=s^2X(s)-sx(0)-x'(0)
+$$
+</div>
 
----
+<p>Substituting the initial conditions:</p>
 
-## Step 2: Solve for X(s)
+<div class="equation">
+$$
+x(0)=0,\qquad x'(0)=1
+$$
+</div>
 
-Expand:
+<p>gives</p>
 
-```text
-2s²X(s) - 2 + 7sX(s) + 3X(s) = 0
-```
+<div class="equation">
+$$
+\mathcal{L}\{x''(t)\}=s^2X(s)-1
+$$
+</div>
 
-Factor out X(s):
+<div class="equation">
+$$
+\mathcal{L}\{x'(t)\}=sX(s)
+$$
+</div>
 
-```text
-X(s)(2s² + 7s + 3) = 2
-```
+<p>Substitute into the differential equation:</p>
 
-Therefore:
+<div class="equation">
+$$
+2(s^2X(s)-1)+7sX(s)+3X(s)=0
+$$
+</div>
 
-```text
-X(s) = 2 / (2s² + 7s + 3)
-```
+<hr>
 
-Factor the denominator:
+<h2>Step 2: Solve for \(X(s)\)</h2>
 
-```text
-2s² + 7s + 3
-= (2s + 1)(s + 3)
-```
+<div class="equation">
+$$
+2s^2X(s)-2+7sX(s)+3X(s)=0
+$$
+</div>
 
-Thus:
+<div class="equation">
+$$
+X(s)(2s^2+7s+3)=2
+$$
+</div>
 
-```text
-X(s) = 2 / [(2s + 1)(s + 3)]
-```
+<div class="equation">
+$$
+X(s)=\frac{2}{2s^2+7s+3}
+$$
+</div>
 
----
+<div class="equation">
+$$
+2s^2+7s+3=(2s+1)(s+3)
+$$
+</div>
 
-## Step 3: Partial Fraction Decomposition
+<div class="equation">
+$$
+X(s)=\frac{2}{(2s+1)(s+3)}
+$$
+</div>
 
-Assume:
+<hr>
 
-```text
-2 / [(2s + 1)(s + 3)]
+<h2>Step 3: Partial Fraction Decomposition</h2>
+
+<div class="equation">
+$$
+\frac{2}{(2s+1)(s+3)}
 =
-A/(2s + 1) + B/(s + 3)
-```
+\frac{A}{2s+1}
++
+\frac{B}{s+3}
+$$
+</div>
 
-Multiply both sides by `(2s + 1)(s + 3)`:
+<div class="equation">
+$$
+2=A(s+3)+B(2s+1)
+$$
+</div>
 
-```text
-2 = A(s + 3) + B(2s + 1)
-```
+<div class="equation">
+$$
+2=(A+2B)s+(3A+B)
+$$
+</div>
 
-Expand:
+<div class="equation">
+$$
+A+2B=0
+$$
+</div>
 
-```text
-2 = (A + 2B)s + (3A + B)
-```
+<div class="equation">
+$$
+3A+B=2
+$$
+</div>
 
-Compare coefficients:
+<div class="equation">
+$$
+A=-2B
+$$
+</div>
 
-```text
-A + 2B = 0
-3A + B = 2
-```
+<div class="equation">
+$$
+3(-2B)+B=2
+$$
+</div>
 
-From the first equation:
+<div class="equation">
+$$
+-5B=2
+$$
+</div>
 
-```text
-A = -2B
-```
+<div class="equation">
+$$
+B=-\frac{2}{5}
+$$
+</div>
 
-Substitute into the second equation:
+<div class="equation">
+$$
+A=\frac{4}{5}
+$$
+</div>
 
-```text
-3(-2B) + B = 2
--5B = 2
-B = -2/5
-```
-
-Then:
-
-```text
-A = 4/5
-```
-
-Therefore:
-
-```text
+<div class="equation">
+$$
 X(s)
 =
-(4/5)/(2s + 1)
+\frac{\frac{4}{5}}{2s+1}
 -
-(2/5)/(s + 3)
-```
+\frac{\frac{2}{5}}{s+3}
+$$
+</div>
 
-Rewrite:
-
-```text
+<div class="equation">
+$$
 X(s)
 =
-(2/5)/(s + 1/2)
+\frac{2}{5}\frac{1}{s+\frac12}
 -
-(2/5)/(s + 3)
-```
+\frac{2}{5}\frac{1}{s+3}
+$$
+</div>
 
----
+<hr>
 
-## Step 4: Inverse Laplace Transform
+<h2>Step 4: Apply the Inverse Laplace Transform</h2>
 
-Using:
+<div class="equation">
+$$
+\mathcal{L}^{-1}
+\left\{
+\frac{1}{s+a}
+\right\}
+=e^{-at}
+$$
+</div>
 
-```text
-L⁻¹{1/(s+a)} = e^(-at)
-```
-
-we obtain:
-
-```text
+<div class="equation">
+$$
 x(t)
 =
-(2/5)e^(-t/2)
+\frac25e^{-t/2}
 -
-(2/5)e^(-3t)
-```
+\frac25e^{-3t}
+$$
+</div>
 
-Factor out `2/5`:
-
-```text
+<div class="equation">
+$$
 x(t)
 =
-(2/5)[e^(-t/2) - e^(-3t)]
-```
+\frac25
+\left(
+e^{-t/2}-e^{-3t}
+\right)
+$$
+</div>
 
----
+<hr>
 
-## Verification
+<h2>Verification</h2>
 
-### Check x(0)
+<div class="equation">
+$$
+x(0)=\frac25(1-1)=0
+$$
+</div>
 
-```text
-x(0)
-=
-(2/5)(1 - 1)
-=
-0
-```
-
-### Check x'(0)
-
-Differentiate:
-
-```text
+<div class="equation">
+$$
 x'(t)
 =
--(1/5)e^(-t/2)
+-\frac15e^{-t/2}
 +
-(6/5)e^(-3t)
-```
+\frac65e^{-3t}
+$$
+</div>
 
-Substitute t = 0:
-
-```text
+<div class="equation">
+$$
 x'(0)
 =
--1/5 + 6/5
+-\frac15+\frac65
 =
 1
-```
+$$
+</div>
 
-Both initial conditions are satisfied.
+<hr>
 
----
+<h2>Final Answer</h2>
 
-## Final Answer
+<div class="box">
+<div class="equation">
+$$
+\boxed{
+x(t)=\frac25
+\left(
+e^{-t/2}-e^{-3t}
+\right)
+}
+$$
+</div>
+</div>
 
-```text
-x(t) = (2/5)[e^(-t/2) - e^(-3t)]
-```
+</body>
+</html>
